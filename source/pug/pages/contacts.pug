@@ -1,8 +1,7 @@
 extends ../template
 
+block variables
+    - var title = 'Contacts'
+
 block content
-
-    +b.DIV.contacts
-
-        +e.H1.title.title Contacts
-        +e.A.link.link(href="/") main
+    +b.DIV.contacts.wrp

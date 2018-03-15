@@ -1,3 +1,9 @@
+
+$browser-context: 16 // Default
+
+@function em($pixels, $context: $browser-context)
+  @return #{$pixels/$context}em
+
 =r($width)
   @media only screen and (max-width: $width+ "px")
     @content
@@ -27,26 +33,52 @@
   left: 0
   margin: auto
 
+=vcenter
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%,-50%)
+
 =hover
   .no-touch &:hover
     @content
 
-%psevdo
+=psevdo
   position: relative
   &:before,&:after
     content: ' '
     position: absolute
-=psevdo
-  @extend %psevdo
 
 =tr
   transition: all .3s ease
 
+=blur($what)
+  -webkit-filter: blur($what+ px)
+  filter: blur($what+ px)
 
+=p($what1: 0, $what2: 0, $what3: 0, $what4: 0)
+  padding: em($what1) em($what2) em($what3) em($what4)
 
+=placeholder-color($color)
+  &::-webkit-input-placeholder  /* WebKit browsers */
+      color: $color
+      opacity: .5
+  &:-moz-placeholder  /* Mozilla Firefox 4 to 18 */
+      color: $color
+      opacity: .5
+  &::-moz-placeholder  /* Mozilla Firefox 19+ */
+      color: $color
+      opacity: .5
+  &:-ms-input-placeholder  /* Internet Explorer 10+ */
+      color: $color
+      opacity: .5
 
-
-
+.visually-hidden
+  position: absolute
+  width: 1px
+  height: 1px
+  overflow: hidden
+  clip: rect(0 0 0 0)
 
 
 

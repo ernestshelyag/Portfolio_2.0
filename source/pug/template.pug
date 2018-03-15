@@ -2,6 +2,7 @@ include bemto/bemto
 - set_bemto_settings({ modifier: "--" })
 
 include mixins
+block variables
 
 doctype html
 html(lang="ru")
@@ -9,9 +10,9 @@ html(lang="ru")
     head
 
         meta(charset="utf-8")
-
-        meta(content="", name="author")
-        meta(content="", name="description")
+        title #{title}
+        meta(content="", name="eric")
+        meta(content="", name="portfolio")
 
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(name="HandheldFriendly", content="true")
@@ -27,6 +28,7 @@ html(lang="ru")
         link(rel="apple-touch-icon", sizes="180x180", href="img/favicon/apple-touch-icon-180x180.png")
 
         link(href="https://fonts.googleapis.com/css?family=Source+Code+Pro", rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css?family=Merriweather", rel="stylesheet")
 
         <!--[if lt IE 9]>
         script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
@@ -34,9 +36,6 @@ html(lang="ru")
         <![endif]-->
 
         link(rel="stylesheet", href="/css/styles.css")
-
-
-        title #{title}
 
     body
 

@@ -1,8 +1,7 @@
 extends ../template
 
+block variables
+    - var title = 'About'
+
 block content
-
-    +b.DIV.about
-
-        +e.H1.title.title About
-        +e.A.link.link(href="/") main
+    +b.DIV.about.wrp

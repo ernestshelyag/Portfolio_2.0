@@ -1,15 +1,11 @@
-$browser-context: 16 // Default
-
-@function em($pixels, $context: $browser-context)
-  @return #{$pixels/$context}em
 
 *, *:before, *:after
   box-sizing: border-box
   -moz-box-sizing: border-box
 
 *::selection
-  background: rgba($main-color,.93)
-  color: $bg-color
+  background: rgba($supreme,.93)
+  color: #fff
 
 
 html
@@ -21,16 +17,48 @@ body
   font-weight: 400
   color: $font-color
   background-color: $bg-color
-  font-size: 16px
+  letter-spacing: em(.7)
   position: relative
   min-width: 320px
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+.wrp
+  +wrp
+  flex: 1 0 auto
+  width: 100%
 
 a
   display: inline-block
-  transition: all .3s ease-in
   color: $font-color
   text-decoration: none
+  +tr
 
 p
-  line-height: 2
-  margin: 1em 0
+  +serif
+  line-height: 1.3
+  font-size: em(15)
+  letter-spacing: em(1.5)
+  text-indent: em(30, 15)
+  font-weight: 100
+  margin: em(60, 15) 0
+
+button
+  +lato
+  background: transparent
+  border: 0
+  color: $font-color
+
+input[type="text"],
+input[type="submit"],
+input[type="button"],
+input[type="email"],
+input[type="password"],
+select,
+textarea
+  +lato
+  appearance: none
+  outline: 0
+
++placeholder-color($font-color)
