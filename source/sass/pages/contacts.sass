@@ -1,2 +1,79 @@
 .contacts
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  +tr
+  transform: scale(.9)
+  &.active
+    transform: perspective(500px) rotateY(18deg) translateZ(-100px) scale(.8)
+    filter: blur(3px)
+    opacity: .5
+  &__title
+    padding: 0
+    span
+      &:first-child
+        color: $main-color
+        font-weight: 200
+  &__mail-btn
+    width: em(50)
+    height: em(50)
+    border-radius: 50%
+    background: $font-color
+    box-shadow: 0 0 2em $main-color-2
+    margin: em(50) 0
+    +psevdo
+    &:before
+      width: em(10)
+      height: em(10)
+      border-right: solid 1px $bg-color
+      border-top: solid 1px $bg-color
+      transform: rotate(45deg)
+      +zero
+    span
+      +serif
+      position: absolute
+      left: 0
+      right: 0
+      margin: auto
+      bottom: em(-25)
+      text-align: center
+  &__list
+    display: flex
+    align-items: baseline
+  &__link
+    position: relative
+    padding: 0 em(30)
+    text-align: center
+  &__icon-name
+    display: block
+  &__icon
+    max-width: em(30)
+    max-height: em(30)
+    margin-bottom: em(10)
+    &_hh
+      max-width: em(50)
+      max-height: em(50)
+      margin-bottom: 0
+
+.mail
+  opacity: 0
+  z-index: -1
+  position: fixed
+  width: 100%
+  height: 80vh
+  margin-top: 10vh
+  &.active
+    opacity: 1
+    z-index: 10
+  &__form
+    width: em(300)
+    position: absolute
+    top: 50%
+    right: 20vw
+    +tr
+    transform: translate(0, -50%) scale(.8)
+    &.active
+      transform: translate(0, -50%) scale(1)
+
 

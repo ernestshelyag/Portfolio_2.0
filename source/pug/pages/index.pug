@@ -4,6 +4,28 @@ block variables
     - var title = 'Home page'
 
 block content
-    +b.DIV.main.wrp
-        +e.H1.title.title Main text
-        +e.P.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores numquam optio voluptatem. At debitis eaque eveniet illum neque, nobis unde?
+    +b.MAIN.main
+        +b.SECTION.hero
+            h1.visually-hidden Эрнест Шеляг
+            +e.DIV.inside-block
+                +e.DIV.text-block
+                    +e.DIV.text-top
+                        +e.SPAN.decore-name
+                            | ern
+                            span.hero__decore-name_es es
+                            | t sh
+                            span.hero__decore-name_e e
+                            | lyag
+                        +e.SPAN.title
+                            | Ernest Shelyag
+                            span Frontend
+                            | developer
+                    +e.DIV.quote-block
+                        +e.SPAN.quote
+                            | "Art should be something that liberates the soul, provokes the imagination
+                            br
+                            | and encourages people to go further."
+                        +e.SPAN.quote-author Keith Haring
+                    +e.DIV.btn-block
+                        +e.A.btn(href="#")
+                        +e.SPAN.btn-text works

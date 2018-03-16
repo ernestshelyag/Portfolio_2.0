@@ -6,9 +6,9 @@ module.exports = function () {
       .pipe($.plumber({
         errorHandler: $.notify.onError(function (err) {
           return {
-            title: 'PUG',
+            title: 'error in PUG',
             message: 'this is da way - ' + err.message,
-            icon: $.daWay.join(__dirname, 'source/assets/444.png')
+            icon: $.daWay.join(__dirname, '../source/assets/404.png')
           };
         })
       }))

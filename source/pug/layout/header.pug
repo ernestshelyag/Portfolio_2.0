@@ -1,3 +1,13 @@
 mixin header()
-    header.header header
+    +b.HEADER.header
+        +e.A.logo(href='/')
+            span Erenest
+            span Shelyag
+        +e.NAV.nav
+            +e.A.link(href='/') Главная
+            +e.A.link(href='/about.html') Обо мне
+            +e.A.link(href='/contacts.html') Контакты
+            +e.A.link(href='/login.html') Войти
+
+
 

@@ -1,3 +1,20 @@
 .header
-  +b
-  text-align: center
+  +wrp
+  display: flex
+  justify-content: space-between
+  align-items: center
+  height: 10vh
+  &__logo
+    color: $main-color
+    font-size: em(20)
+    span
+      letter-spacing: 0
+      font-weight: 700
+      &:first-child
+        font-weight: 300
+  &__link
+    padding-left: em(10)
+    color: $font-color-2
+    &:hover
+      color: $main-color-hover
+

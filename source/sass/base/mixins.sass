@@ -15,10 +15,11 @@ $browser-context: 16 // Default
 =wrp
   max-width: 1240px
   margin: 0 auto
+  width: 100%
   padding: 0 50px
   +r(1024)
     max-width: 958px
-    padding: 0 15px
+    padding: 0 em(15)
 
 =b
   border: solid 1px red
@@ -26,7 +27,6 @@ $browser-context: 16 // Default
   border: solid 1px blue
 
 =zero
-  position: absolute
   top: 0
   bottom: 0
   right: 0
@@ -46,7 +46,7 @@ $browser-context: 16 // Default
 =psevdo
   position: relative
   &:before,&:after
-    content: ' '
+    content: ''
     position: absolute
 
 =tr

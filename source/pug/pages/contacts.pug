@@ -4,4 +4,39 @@ block variables
     - var title = 'Contacts'
 
 block content
-    +b.DIV.contacts.wrp
+    +b.DIV.contacts.wrp#contactsWrp
+        h1.visually-hidden Контакты
+        +e.SPAN.title.title К
+            span о
+            span нтакты
+        +e.BUTTON.mail-btn#contactsBtn
+            span mail
+        +e.UL.list
+            +e.LI.item
+                +e.A.link(href='#')
+                    +e.IMG.icon(src='../upload/icons/skype.svg')
+                    +e.SPAN.icon-name skype
+            +e.LI.item
+                +e.A.link(href='#')
+                    +e.IMG.icon.contacts__icon_hh(src='../upload/icons/hh.png')
+                    +e.SPAN.icon-name head hunter
+            +e.LI.item
+                +e.A.link(href='#')
+                    +e.IMG.icon(src='../upload/icons/github.svg')
+                    +e.SPAN.icon-name github
+            +e.LI.item
+                +e.A.link(href='#')
+                    +e.IMG.icon(src='../upload/icons/telegram.svg')
+                    +e.SPAN.icon-name telegram
+
+    +b.DIV.mail#contactsMail
+        +b.FORM.form.mail__form#mail(action='/contacts' method='post' enctype='application/x-www-form-urlencoded')
+            +e.BUTTON.close-btn#closeBtn
+            +e.DIV.line
+                +e.INPUT.input(name="name" type="text" placeholder="Имя")
+            +e.DIV.line
+                +e.INPUT.input(name="email" type="email" placeholder="E-mail")
+            +e.DIV.line
+                +e.TEXTAREA.textarea(placeholder="Ваше сообщение" name="text")
+            +e.DIV.line
+                +e.BUTTON.button(type="submit") Отправить

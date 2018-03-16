@@ -9,8 +9,8 @@ module.exports = function () {
     require('lost'),
     $.mqpacker({
       sort: sortMediaQueries
-    }),
-    $.csso
+    })
+    //$.csso
   ];
 
   function isMax (mq) {
@@ -39,9 +39,9 @@ module.exports = function () {
       .pipe($.plumber({
         errorHandler: $.notify.onError(function (err) {
           return {
-            title: 'SASS',
+            title: 'error in SASS',
             message: 'this is da way - ' + err.message,
-            icon: $.daWay.join(__dirname, 'source/assets/444.png')
+            icon: $.daWay.join(__dirname, '../source/assets/404.png')
           };
         })
       }))

@@ -1,0 +1,21 @@
+extends ../template
+
+block variables
+    - var title = 'login'
+
+block content
+    +b.DIV.login.wrp
+        h1.visually-hidden Вход на страницу администратора
+        +e.SPAN.title.title В
+            span ход
+        +b.FORM.form.login__form(action="/login", method="post")
+
+            +e.DIV.line
+                if (msgslogin)
+                    .form__status= msgslogin
+                +e.INPUT.input(type="text" name="login" placeholder="логин")
+            +e.DIV.line
+                +e.INPUT.input(type="password" name="password" placeholder="пароль")
+            +e.DIV.line
+                +e.BUTTON.button(type="submit") Войти
+
