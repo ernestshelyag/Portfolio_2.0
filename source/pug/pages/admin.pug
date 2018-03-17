@@ -4,5 +4,35 @@ block variables
     - var title = 'admin'
 
 block content
-    +b.DIV.login.wrp
-        +e.H1.title.title Admin
+    +b.DIV.admin.wrp
+        +e.IMG.img(src='../upload/admin/adm.jpg')
+        +e.DIV.form-block
+            +b.FORM.form.admin__form(action='/admin/num' method="post")
+                +e.DIV.title Цифры
+                if (msgnumbers)
+                    .status= msgnumbers
+                +e.DIV.line
+                    +e.INPUT.input(name="years" type="number" placeholder="лет на сцене")
+                +e.DIV.line
+                    +e.INPUT.input(name="noble" type="number" placeholder="премий")
+                +e.DIV.line
+                    +e.INPUT.input(name="bigmacs" type="number" placeholder="бигмаков")
+                +e.DIV.line
+                    +e.INPUT.input(name="toes" type="number" placeholder="пальцев")
+                +e.DIV.line
+                    +e.BUTTON.button(type="submit").button Сохранить
+
+            +b.FORM.form.admin__form(action='/admin/works' method="post" enctype="multipart/form-data")
+                +e.DIV.title Добавить сайт
+                if (msgfile)
+                    .status= msgfile
+                +e.DIV.line
+                    +e.INPUT.input(name="photo" type="file" required accept="image/*")
+                +e.DIV.line
+                    +e.INPUT.input(name="title" type="text" placeholder="Название сайта")
+                +e.DIV.line
+                    +e.INPUT.input(name="description" type="text" placeholder="Описание")
+                +e.DIV.line
+                    +e.INPUT.input(name="link" type="text" placeholder="Ссылка")
+                +e.DIV.line
+                    +e.BUTTON.button(type="submit") Добавить

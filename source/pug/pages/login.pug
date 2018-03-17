@@ -8,14 +8,13 @@ block content
         h1.visually-hidden Вход на страницу администратора
         +e.SPAN.title.title В
             span ход
-        +b.FORM.form.login__form(action="/login", method="post")
-
+        +b.FORM.form(action='/login', method='post').login__form
             +e.DIV.line
                 if (msgslogin)
-                    .form__status= msgslogin
-                +e.INPUT.input(type="text" name="login" placeholder="логин")
+                    +e.DIV.err= msgslogin
+                +e.INPUT.input(type="text" name="login" placeholder="логин (123)")
             +e.DIV.line
-                +e.INPUT.input(type="password" name="password" placeholder="пароль")
+                +e.INPUT.input(type="password" name="password" placeholder="пароль (123)")
             +e.DIV.line
-                +e.BUTTON.button(type="submit") Войти
-
+                +e.BUTTON.button(type="submit") Залогиниться
+        +e.A.link(href='/admin') ..или войти

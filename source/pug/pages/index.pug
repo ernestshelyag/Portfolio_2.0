@@ -4,7 +4,7 @@ block variables
     - var title = 'Home page'
 
 block content
-    +b.MAIN.main
+    +b.MAIN.main.wrp
         +b.SECTION.hero
             h1.visually-hidden Эрнест Шеляг
             +e.DIV.inside-block
@@ -17,7 +17,7 @@ block content
                             span.hero__decore-name_e e
                             | lyag
                         +e.SPAN.title
-                            | Ernest Shelyag
+                            | Эрнест Шеляг
                             span Frontend
                             | developer
                     +e.DIV.quote-block
@@ -29,3 +29,48 @@ block content
                     +e.DIV.btn-block
                         +e.A.btn(href="#")
                         +e.SPAN.btn-text works
+        +e.SECTION.portfolio
+            h1.visually-hidden Портфолио
+            +e.SPAN.title.title Портф
+                span о
+                span лио
+            +e.DIV.text-block
+                +e.P.text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem culpa deleniti ea eius harum illum inventore minus nobis odio similique! Accusamus aut fugit obcaecati. Corporis delectus eius esse expedita laboriosam magnam maxime officiis, quae quaerat, quos reprehenderit voluptates voluptatum. Architecto at beatae delectus deleniti dolore dolorem dolorum eligendi error et facere hic impedit in iure labore minima minus molestias nostrum nulla obcaecati odio, perspiciatis placeat, porro possimus quae quasi quod, quos recusandae similique voluptates voluptatibus. A, consectetur dicta dolorem dolores fugiat illum incidunt inventore quis sunt tempora. A commodi consequuntur dicta doloribus fugiat illum non quibusdam ratione repudiandae tempora, tempore.
+
+            +e.UL.list
+                each item in works
+                    +e.LI.item
+                        +e.H2.works-title= item.name
+                        +e.A.link(href=`${item.link}`)
+                            +e.IMG.img(src=`${item.src}`)
+                            +e.SPAN.name= item.link
+                        +e.P.description= item.description
+
+            //+e.UL.list
+            //    +e.LI.item
+            //        +e.H2.works-title Такси
+            //        +e.A.link(href="http://prospekt-taxi.ru/")
+            //            +e.IMG.img(src='../upload/portfolio/port1.jpg')
+            //            +e.SPAN.name taxi.ru
+            //        +e.P.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, mollitia?
+            //    +e.LI.item
+            //        +e.H2.works-title Ремтех
+            //        +e.A.link(href="http://remtechspb.ru/")
+            //            +e.IMG.img(src='../upload/portfolio/port2.jpg')
+            //            +e.SPAN.name remtech.ru
+            //        +e.P.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, mollitia?
+            //    +e.LI.item
+            //        +e.H2.works-title Биткоин
+            //        +e.A.link(href="http://zero.indins.ru/")
+            //            +e.IMG.img(src='../upload/portfolio/port3.jpg')
+            //            +e.SPAN.name bitcoin.ru
+            //        +e.P.description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur, mollitia?
+            //
+            //ul.product__list
+            //    each item in products
+            //        li.product__item
+            //            img(src=`${item.src}`).product__img
+            //            .product__hover
+            //                .product__description
+            //                    .product__name= item.name
+            //                    .product__price= `$ ${item.price}`

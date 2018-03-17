@@ -169,6 +169,8 @@ button {
   outline: 0; }
 
 input[type="text"],
+input[type="number"],
+input[type="file"],
 input[type="submit"],
 input[type="button"],
 input[type="email"],
@@ -207,6 +209,10 @@ textarea {
   text-transform: uppercase;
   display: block;
   text-align: center; }
+
+.form__title {
+  font-size: 1.875em;
+  font-weight: 200; }
 
 .form__line {
   padding: 1.25em 1.25em 0.3125em;
@@ -421,6 +427,35 @@ textarea {
   padding: 0.625em 0;
   color: #585858; }
 
+.main__title {
+  margin-top: 0.625em; }
+  .main__title span:first-child {
+    color: #cd0000;
+    font-weight: 200; }
+
+.main__list {
+  text-align: center; }
+
+.main__item {
+  margin-bottom: 1.875em; }
+
+.main__works-title {
+  color: #cd0000;
+  font-size: 1.875em;
+  font-weight: 300; }
+
+.main__img {
+  width: 50vw;
+  height: auto; }
+
+.main__name {
+  display: block;
+  font-style: italic; }
+
+.main__description {
+  margin: 0;
+  padding-top: 0.625em; }
+
 .about {
   display: -ms-flexbox;
   display: flex;
@@ -610,7 +645,25 @@ textarea {
     .login__title span {
       color: #fffff0;
       font-weight: 100; }
-    @media only screen and (max-width: 1024px) {
+  .login__link {
+    padding-top: 0.625em;
+    font-weight: 200; }
+    .login__link:hover {
+      color: #d62626; }
+
+.admin__img {
+  margin: auto;
+  display: block;
+  width: 200px; }
+
+.admin__form-block {
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 100px;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+@media only screen and (max-width: 1024px) {
 
   .wrp {
     max-width: 958px;

@@ -12,8 +12,8 @@ module.exports = function () {
   });
   // // - - - - -
   $.gulp.task('imgToPublic', function() {
-    return $.gulp.src($.path.source + 'statics/img/**')
+    return $.gulp.src($.path.source + 'statics/upload/**')
       .pipe($.imagemin())
-      .pipe($.gulp.dest($.path.public + 'img/'));
+      .pipe($.gulp.dest($.path.public + 'upload/'));
   });
 };

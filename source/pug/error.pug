@@ -1,4 +1,4 @@
-extends ../template
+extends ./template
 
 block variables
     - var title = '404'
@@ -8,6 +8,6 @@ block content
         h1.visually-hidden 404
         +e.SPAN.title.title 40
             span 4
-        +e.SPAN.text I think "......" - this is not the right way.
+        +e.SPAN.text= errDescription
         +e.SPAN.text-link This is the way -->
             +e.A.link(href='/') 'click'

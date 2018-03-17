@@ -1,3 +1,6 @@
-module.exports.getAbout = function (req, res) {
-  res.render('pages/about', { title: 'About' });
+
+const numbers = require('../db.json').numbers;
+
+module.exports.getAbout = function (req, res, next) {
+  res.render('pages/about', {numbers});
 };

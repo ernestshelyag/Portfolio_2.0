@@ -30,8 +30,9 @@ block content
                     +e.SPAN.icon-name telegram
 
     +b.DIV.mail#contactsMail
-        +b.FORM.form.mail__form#mail(action='/contacts' method='post' enctype='application/x-www-form-urlencoded')
+        +b.FORM.form.mail__form#mail(action='/' method='post' enctype='application/x-www-form-urlencoded')
             +e.BUTTON.close-btn#closeBtn
+            .status
             +e.DIV.line
                 +e.INPUT.input(name="name" type="text" placeholder="Имя")
             +e.DIV.line

@@ -28,12 +28,44 @@
       Пожалуйста<a href="http://browsehappy.com/" style="padding: 0 5px; font-weight: bold; text-transform: uppercase; color: blue;">обновите ваш браузер</a>перейдя по ссылке.
     </p><![endif]-->
     <header class="header"><a class="header__logo" href="/"><span>Erenest</span><span>Shelyag</span></a>
-      <nav class="header__nav"><a class="header__link" href="/">Главная</a><a class="header__link" href="/about.html">Обо мне</a><a class="header__link" href="/contacts.html">Контакты</a><a class="header__link" href="/login.html">Войти</a>
+      <nav class="header__nav"><a class="header__link" href="/">Главная</a><a class="header__link" href="/about">Обо мне</a><a class="header__link" href="/contacts">Контакты</a><a class="header__link" href="/login">Войти</a>
       </nav>
     </header>
-    <div class="login wrp">
-      <h1 class="login__title title">Admin
-      </h1>
+    <div class="admin wrp"><img class="admin__img" src="../upload/admin/adm.jpg" alt="" role="presentation"/>
+      <div class="admin__form-block">
+        <form class="form admin__form" action="/admin/skills" method="post">
+          <div class="form__title">Цифры
+          </div>
+          <div class="form__line"><input class="form__input" name="years" type="number" placeholder="лет на сцене"/>
+          </div>
+          <div class="form__line"><input class="form__input" name="noble" type="number" placeholder="премий"/>
+          </div>
+          <div class="form__line"><input class="form__input" name="bigmac" type="number" placeholder="логин"/>
+          </div>
+          <div class="form__line"><input class="form__input" name="toes" type="number" placeholder="пальцев"/>
+          </div>
+          <div class="form__line">
+            <button class="form__button button" type="submit">Сохранить
+            </button>
+          </div>
+        </form>
+        <form class="form admin__form" action="/admin/upload" method="post" enctype="multipart/form-data">
+          <div class="form__title">Добавить сайт
+          </div>
+          <div class="form__line"><input class="form__input" name="photo" type="file" required="required" accept="image/*"/>
+          </div>
+          <div class="form__line"><input class="form__input" name="title" type="text" placeholder="Название сайта"/>
+          </div>
+          <div class="form__line"><input class="form__input" name="description" type="text" placeholder="Описание"/>
+          </div>
+          <div class="form__line"><input class="form__input" name="link" type="text" placeholder="Ссылка"/>
+          </div>
+          <div class="form__line">
+            <button class="form__button" type="submit">Добавить
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
     <footer class="footer">Ernest Shelyag © 2018
     </footer>
